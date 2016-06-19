@@ -1,2 +1,1943 @@
+@a11y-show {
+  position: static;
+  left: auto;
+  top: auto; }
+
+/**
+ * @arrow
+ *
+ * Adds an arrow to an element
+ *
+ * @param		position	$position: where the arrow should be added; left/top/right/bottom
+ * @param		unit		$size: size of arrow (20px for example)
+ * @param		color		$background: the arrow's background color
+ * @param		unit		$border-width: the width of the arrow's border
+ * @param		color		$border-color: color of the border
+ * @param		percent		$align: how to align the arrow (left|10px|50% etc)
+ */
+/**
+ * @card-flip
+ *
+ * Use on a container with two children, the first child will be visible and on hover the container will rotate to reveal the second child
+ *
+ * @param	bool	$hover: whether to rotate the "card" on hover (you may wanna do this manually)
+ * @param:	string	$rotate: X or Y - in which direction to rotate
+ */
+/**
+ * @device
+ *
+ * Turns an element into a mobile device (Nexus 5-looking)
+ *
+ * @param	unit	$width: the width of the device
+ * @param	color	$color: color of the device
+ * @param	bool	$h: whether to set height (if used on an img height should be auto)
+ */
+/**
+ * @float-left
+ *
+ * Floats an element to the left at the set breakpoint and gives it some sensible margin
+ *
+ * @param	min-width-declaration	$bp: at which breakpoint the floating should occur or false for no difference in resolutions
+ */
+/**
+ * @float-right
+ *
+ * Floats an element to the right at the set breakpoint and gives it some sensible margin
+ *
+ * @param	min-width-declaration	$bp: at which breakpoint the floating should occur or false for no difference in resolutions
+ */
+.osx-dock > * {
+  opacity: 1;
+  transform: scale(1);
+  transition: all .1s ease-out; }
+
+.osx-dock:hover > *,
+.osx-dock.active > * {
+  opacity: .6;
+  transform: scale(0.9); }
+
+.osx-dock:hover > :hover,
+.osx-dock.active > .active {
+  opacity: 1;
+  transform: scale(1.1); }
+
+/***
+    title: Background Colors
+    section: Colors
+    description: Use to apply a background color to an element. Add your colors to the $bg-colors array in config/_bg-colors.scss.
+    example:
+        <div class="bg--white">I have a white background color</div>
+***/
+.bg--transparent {
+  background-color: transparent; }
+
+.bg--white {
+  background-color: #fff; }
+
+.bg-overlay {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .bg-overlay:before {
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .bg-overlay:before {
+        min-height: 500%; } }
+  .bg-overlay > * {
+    position: relative; }
+  .bg-overlay--hover {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-size: 100% auto;
+    transition: background-size .2s ease-out; }
+    .bg-overlay--hover:before {
+      background: rgba(0, 0, 0, 0.5);
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .bg-overlay--hover:before {
+          min-height: 500%; } }
+    .bg-overlay--hover > * {
+      position: relative; }
+    .bg-overlay--hover:before {
+      transition: background-color .2s ease-out; }
+    .bg-overlay--hover:hover {
+      background-size: 110% auto; }
+      .bg-overlay--hover:hover:before {
+        background: rgba(0, 0, 0, 0.9); }
+
+.bg-overlay--transparent {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .bg-overlay--transparent:before {
+    background: rgba(0, 0, 0, 0.7);
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .bg-overlay--transparent:before {
+        min-height: 500%; } }
+  .bg-overlay--transparent > * {
+    position: relative; }
+  .bg-overlay--transparent.bg-overlay--hover {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-size: 100% auto;
+    transition: background-size .2s ease-out; }
+    .bg-overlay--transparent.bg-overlay--hover:before {
+      background: rgba(0, 0, 0, 0.7);
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .bg-overlay--transparent.bg-overlay--hover:before {
+          min-height: 500%; } }
+    .bg-overlay--transparent.bg-overlay--hover > * {
+      position: relative; }
+    .bg-overlay--transparent.bg-overlay--hover:before {
+      transition: background-color .2s ease-out; }
+    .bg-overlay--transparent.bg-overlay--hover:hover {
+      background-size: 110% auto; }
+      .bg-overlay--transparent.bg-overlay--hover:hover:before {
+        background: rgba(0, 0, 0, 0.9); }
+
+.bg-overlay--white {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .bg-overlay--white:before {
+    background: rgba(255, 255, 255, 0.7);
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .bg-overlay--white:before {
+        min-height: 500%; } }
+  .bg-overlay--white > * {
+    position: relative; }
+  .bg-overlay--white.bg-overlay--hover {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-size: 100% auto;
+    transition: background-size .2s ease-out; }
+    .bg-overlay--white.bg-overlay--hover:before {
+      background: rgba(255, 255, 255, 0.7);
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .bg-overlay--white.bg-overlay--hover:before {
+          min-height: 500%; } }
+    .bg-overlay--white.bg-overlay--hover > * {
+      position: relative; }
+    .bg-overlay--white.bg-overlay--hover:before {
+      transition: background-color .2s ease-out; }
+    .bg-overlay--white.bg-overlay--hover:hover {
+      background-size: 110% auto; }
+      .bg-overlay--white.bg-overlay--hover:hover:before {
+        background: rgba(255, 255, 255, 0.9); }
+
+/***
+    title: Button
+    section: Buttons
+    description: Use to create buttons. Buttons come in various sizes and colors. Add more colors and customize your buttons in config/_button.scss.
+    example:
+        <p><a href="#" class="button">I'm a normal button</a></p>
+        <p><button>Button elements automatically look like buttons</button></p>
+        <p><input type="submit" value="Submit inputs too!"></p>
+        <p><button class="button--wide">Full width!</button></p>
+        <p><a href="#" class="button">Continue</a> <a href="#" class="button button--gray">Cancel</a></p>
+        <p><a href="#" class="button button--small">Small button</a></p>
+***/
+.button,
+input[type=submit],
+button {
+  background-color: #06f;
+  border: 2px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 0.8rem 2.4rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2rem;
+  text-shadow: none;
+  box-shadow: none; }
+  .button:hover,
+  input[type=submit]:hover,
+  button:hover {
+    background-color: #005ce6; }
+  .button:active,
+  input[type=submit]:active,
+  button:active {
+    background-color: #0052cc; }
+  .button[class*="icon-"]:empty:not([value]),
+  input[type=submit][class*="icon-"]:empty:not([value]),
+  button[class*="icon-"]:empty:not([value]) {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .button:hover,
+  input[type=submit]:hover,
+  button:hover {
+    color: #fff;
+    text-decoration: none; }
+
+.button--ghost {
+  background-color: transparent;
+  color: #06f;
+  border: 2px solid #06f; }
+  .button--ghost:hover {
+    background-color: #06f;
+    color: #fff; }
+
+.button--blue {
+  background-color: #06f;
+  border: 2px solid transparent; }
+  .button--blue:hover {
+    background-color: #005ce6; }
+  .button--blue:active {
+    background-color: #0052cc; }
+  .button--blue.button--ghost {
+    background-color: transparent;
+    color: #06f;
+    border-color: #06f; }
+    .button--blue.button--ghost:hover {
+      background-color: #06f;
+      color: #fff; }
+
+.button--red {
+  background-color: #600;
+  border: 2px solid transparent; }
+  .button--red:hover {
+    background-color: #4d0000; }
+  .button--red:active {
+    background-color: #330000; }
+  .button--red.button--ghost {
+    background-color: transparent;
+    color: #600;
+    border-color: #600; }
+    .button--red.button--ghost:hover {
+      background-color: #600;
+      color: #fff; }
+
+.button--small {
+  font-size: 80%;
+  padding: 0.64rem 1.92rem; }
+
+.button--large {
+  font-size: 120%; }
+
+.button--wide {
+  display: block;
+  width: 100%; }
+
+/***
+    title: Cols
+    section: Grid
+    description: Use to align elements in rows and columns. Perfect for use on ul/li setups or indeed any parent/child markup. Use bp--modifiers to set number of columns in different widths. Customize gutter and breakpoints in config/_cols.scss.
+    example:
+        <ul class="cols cols--2 cols--4--bp-medium">
+            <li>I'm two columns</li>
+            <li>In low resolution</li>
+            <li>But four columns</li>
+            <li>In high resolution</li>
+        </ul>
+***/
+/**
+ * @col
+ *
+ * FLoats elements into columns
+ *
+ * @param	int		$num: how many columns
+ * @param	unit	$gutter: space between columns
+ * @param	string	$selector: child-selector
+ */
+/**
+ * @col
+ *
+ * A single column
+ *
+ * @param	int		$num: how many items per row
+ * @param	unit	$gutter: space between cols
+ */
+.cols {
+  clear: both;
+  margin-left: 0;
+  list-style: none; }
+  .cols:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.cols--2 {
+  clear: both;
+  margin-left: 0;
+  list-style: none; }
+  .cols--2:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .cols--2 > * {
+    float: left;
+    box-sizing: border-box;
+    width: calc(50% - 0.5rem);
+    margin-right: 1rem;
+    width: calc(49.5% - 0.5rem) \9; }
+    .cols--2 > *:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cols--2 > * {
+        width: calc(49.5% - 0.5rem); } }
+    .cols--2 > *:not(:nth-child(2n)) {
+      margin-right: 1rem; }
+    .cols--2 > *:nth-child(2n) {
+      margin-right: 0; }
+  .cols--2 > *:nth-child(2n) + * {
+    clear: both; }
+  .cols--2 > *:not(:nth-child(2n)) + * {
+    clear: none; }
+
+.cols--3 {
+  clear: both;
+  margin-left: 0;
+  list-style: none; }
+  .cols--3:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .cols--3 > * {
+    float: left;
+    box-sizing: border-box;
+    width: calc(33.3333333333% - 0.6666666667rem);
+    margin-right: 1rem;
+    width: calc(33% - 0.6666666667rem) \9; }
+    .cols--3 > *:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cols--3 > * {
+        width: calc(33% - 0.6666666667rem); } }
+    .cols--3 > *:not(:nth-child(3n)) {
+      margin-right: 1rem; }
+    .cols--3 > *:nth-child(3n) {
+      margin-right: 0; }
+  .cols--3 > *:nth-child(3n) + * {
+    clear: both; }
+  .cols--3 > *:not(:nth-child(3n)) + * {
+    clear: none; }
+
+.cols--4 {
+  clear: both;
+  margin-left: 0;
+  list-style: none; }
+  .cols--4:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .cols--4 > * {
+    float: left;
+    box-sizing: border-box;
+    width: calc(25% - 0.75rem);
+    margin-right: 1rem;
+    width: calc(24.75% - 0.75rem) \9; }
+    .cols--4 > *:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cols--4 > * {
+        width: calc(24.75% - 0.75rem); } }
+    .cols--4 > *:not(:nth-child(4n)) {
+      margin-right: 1rem; }
+    .cols--4 > *:nth-child(4n) {
+      margin-right: 0; }
+  .cols--4 > *:nth-child(4n) + * {
+    clear: both; }
+  .cols--4 > *:not(:nth-child(4n)) + * {
+    clear: none; }
+
+@media (min-width: 400px) {
+  .cols--2--bp-small {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--2--bp-small:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--2--bp-small > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(50% - 0.5rem);
+      margin-right: 1rem;
+      width: calc(49.5% - 0.5rem) \9; }
+      .cols--2--bp-small > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 400px) and (-ms-high-contrast: none), (min-width: 400px) and (-ms-high-contrast: active) {
+      .cols--2--bp-small > * {
+        width: calc(49.5% - 0.5rem); } }
+
+@media (min-width: 400px) {
+      .cols--2--bp-small > *:not(:nth-child(2n)) {
+        margin-right: 1rem; }
+      .cols--2--bp-small > *:nth-child(2n) {
+        margin-right: 0; }
+    .cols--2--bp-small > *:nth-child(2n) + * {
+      clear: both; }
+    .cols--2--bp-small > *:not(:nth-child(2n)) + * {
+      clear: none; } }
+
+@media (min-width: 400px) {
+  .cols--3--bp-small {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--3--bp-small:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--3--bp-small > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(33.3333333333% - 0.6666666667rem);
+      margin-right: 1rem;
+      width: calc(33% - 0.6666666667rem) \9; }
+      .cols--3--bp-small > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 400px) and (-ms-high-contrast: none), (min-width: 400px) and (-ms-high-contrast: active) {
+      .cols--3--bp-small > * {
+        width: calc(33% - 0.6666666667rem); } }
+
+@media (min-width: 400px) {
+      .cols--3--bp-small > *:not(:nth-child(3n)) {
+        margin-right: 1rem; }
+      .cols--3--bp-small > *:nth-child(3n) {
+        margin-right: 0; }
+    .cols--3--bp-small > *:nth-child(3n) + * {
+      clear: both; }
+    .cols--3--bp-small > *:not(:nth-child(3n)) + * {
+      clear: none; } }
+
+@media (min-width: 400px) {
+  .cols--4--bp-small {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--4--bp-small:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--4--bp-small > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(25% - 0.75rem);
+      margin-right: 1rem;
+      width: calc(24.75% - 0.75rem) \9; }
+      .cols--4--bp-small > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 400px) and (-ms-high-contrast: none), (min-width: 400px) and (-ms-high-contrast: active) {
+      .cols--4--bp-small > * {
+        width: calc(24.75% - 0.75rem); } }
+
+@media (min-width: 400px) {
+      .cols--4--bp-small > *:not(:nth-child(4n)) {
+        margin-right: 1rem; }
+      .cols--4--bp-small > *:nth-child(4n) {
+        margin-right: 0; }
+    .cols--4--bp-small > *:nth-child(4n) + * {
+      clear: both; }
+    .cols--4--bp-small > *:not(:nth-child(4n)) + * {
+      clear: none; } }
+
+@media (min-width: 760px) {
+  .cols--2--bp-medium {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--2--bp-medium:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--2--bp-medium > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(50% - 0.5rem);
+      margin-right: 1rem;
+      width: calc(49.5% - 0.5rem) \9; }
+      .cols--2--bp-medium > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 760px) and (-ms-high-contrast: none), (min-width: 760px) and (-ms-high-contrast: active) {
+      .cols--2--bp-medium > * {
+        width: calc(49.5% - 0.5rem); } }
+
+@media (min-width: 760px) {
+      .cols--2--bp-medium > *:not(:nth-child(2n)) {
+        margin-right: 1rem; }
+      .cols--2--bp-medium > *:nth-child(2n) {
+        margin-right: 0; }
+    .cols--2--bp-medium > *:nth-child(2n) + * {
+      clear: both; }
+    .cols--2--bp-medium > *:not(:nth-child(2n)) + * {
+      clear: none; } }
+
+@media (min-width: 760px) {
+  .cols--3--bp-medium {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--3--bp-medium:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--3--bp-medium > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(33.3333333333% - 0.6666666667rem);
+      margin-right: 1rem;
+      width: calc(33% - 0.6666666667rem) \9; }
+      .cols--3--bp-medium > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 760px) and (-ms-high-contrast: none), (min-width: 760px) and (-ms-high-contrast: active) {
+      .cols--3--bp-medium > * {
+        width: calc(33% - 0.6666666667rem); } }
+
+@media (min-width: 760px) {
+      .cols--3--bp-medium > *:not(:nth-child(3n)) {
+        margin-right: 1rem; }
+      .cols--3--bp-medium > *:nth-child(3n) {
+        margin-right: 0; }
+    .cols--3--bp-medium > *:nth-child(3n) + * {
+      clear: both; }
+    .cols--3--bp-medium > *:not(:nth-child(3n)) + * {
+      clear: none; } }
+
+@media (min-width: 760px) {
+  .cols--4--bp-medium {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--4--bp-medium:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--4--bp-medium > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(25% - 0.75rem);
+      margin-right: 1rem;
+      width: calc(24.75% - 0.75rem) \9; }
+      .cols--4--bp-medium > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 760px) and (-ms-high-contrast: none), (min-width: 760px) and (-ms-high-contrast: active) {
+      .cols--4--bp-medium > * {
+        width: calc(24.75% - 0.75rem); } }
+
+@media (min-width: 760px) {
+      .cols--4--bp-medium > *:not(:nth-child(4n)) {
+        margin-right: 1rem; }
+      .cols--4--bp-medium > *:nth-child(4n) {
+        margin-right: 0; }
+    .cols--4--bp-medium > *:nth-child(4n) + * {
+      clear: both; }
+    .cols--4--bp-medium > *:not(:nth-child(4n)) + * {
+      clear: none; } }
+
+@media (min-width: 1020px) {
+  .cols--2--bp-large {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--2--bp-large:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--2--bp-large > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(50% - 0.5rem);
+      margin-right: 1rem;
+      width: calc(49.5% - 0.5rem) \9; }
+      .cols--2--bp-large > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 1020px) and (-ms-high-contrast: none), (min-width: 1020px) and (-ms-high-contrast: active) {
+      .cols--2--bp-large > * {
+        width: calc(49.5% - 0.5rem); } }
+
+@media (min-width: 1020px) {
+      .cols--2--bp-large > *:not(:nth-child(2n)) {
+        margin-right: 1rem; }
+      .cols--2--bp-large > *:nth-child(2n) {
+        margin-right: 0; }
+    .cols--2--bp-large > *:nth-child(2n) + * {
+      clear: both; }
+    .cols--2--bp-large > *:not(:nth-child(2n)) + * {
+      clear: none; } }
+
+@media (min-width: 1020px) {
+  .cols--3--bp-large {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--3--bp-large:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--3--bp-large > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(33.3333333333% - 0.6666666667rem);
+      margin-right: 1rem;
+      width: calc(33% - 0.6666666667rem) \9; }
+      .cols--3--bp-large > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 1020px) and (-ms-high-contrast: none), (min-width: 1020px) and (-ms-high-contrast: active) {
+      .cols--3--bp-large > * {
+        width: calc(33% - 0.6666666667rem); } }
+
+@media (min-width: 1020px) {
+      .cols--3--bp-large > *:not(:nth-child(3n)) {
+        margin-right: 1rem; }
+      .cols--3--bp-large > *:nth-child(3n) {
+        margin-right: 0; }
+    .cols--3--bp-large > *:nth-child(3n) + * {
+      clear: both; }
+    .cols--3--bp-large > *:not(:nth-child(3n)) + * {
+      clear: none; } }
+
+@media (min-width: 1020px) {
+  .cols--4--bp-large {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--4--bp-large:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--4--bp-large > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(25% - 0.75rem);
+      margin-right: 1rem;
+      width: calc(24.75% - 0.75rem) \9; }
+      .cols--4--bp-large > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 1020px) and (-ms-high-contrast: none), (min-width: 1020px) and (-ms-high-contrast: active) {
+      .cols--4--bp-large > * {
+        width: calc(24.75% - 0.75rem); } }
+
+@media (min-width: 1020px) {
+      .cols--4--bp-large > *:not(:nth-child(4n)) {
+        margin-right: 1rem; }
+      .cols--4--bp-large > *:nth-child(4n) {
+        margin-right: 0; }
+    .cols--4--bp-large > *:nth-child(4n) + * {
+      clear: both; }
+    .cols--4--bp-large > *:not(:nth-child(4n)) + * {
+      clear: none; } }
+
+@media (min-width: 1600px) {
+  .cols--2--bp-x-large {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--2--bp-x-large:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--2--bp-x-large > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(50% - 0.5rem);
+      margin-right: 1rem;
+      width: calc(49.5% - 0.5rem) \9; }
+      .cols--2--bp-x-large > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 1600px) and (-ms-high-contrast: none), (min-width: 1600px) and (-ms-high-contrast: active) {
+      .cols--2--bp-x-large > * {
+        width: calc(49.5% - 0.5rem); } }
+
+@media (min-width: 1600px) {
+      .cols--2--bp-x-large > *:not(:nth-child(2n)) {
+        margin-right: 1rem; }
+      .cols--2--bp-x-large > *:nth-child(2n) {
+        margin-right: 0; }
+    .cols--2--bp-x-large > *:nth-child(2n) + * {
+      clear: both; }
+    .cols--2--bp-x-large > *:not(:nth-child(2n)) + * {
+      clear: none; } }
+
+@media (min-width: 1600px) {
+  .cols--3--bp-x-large {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--3--bp-x-large:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--3--bp-x-large > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(33.3333333333% - 0.6666666667rem);
+      margin-right: 1rem;
+      width: calc(33% - 0.6666666667rem) \9; }
+      .cols--3--bp-x-large > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 1600px) and (-ms-high-contrast: none), (min-width: 1600px) and (-ms-high-contrast: active) {
+      .cols--3--bp-x-large > * {
+        width: calc(33% - 0.6666666667rem); } }
+
+@media (min-width: 1600px) {
+      .cols--3--bp-x-large > *:not(:nth-child(3n)) {
+        margin-right: 1rem; }
+      .cols--3--bp-x-large > *:nth-child(3n) {
+        margin-right: 0; }
+    .cols--3--bp-x-large > *:nth-child(3n) + * {
+      clear: both; }
+    .cols--3--bp-x-large > *:not(:nth-child(3n)) + * {
+      clear: none; } }
+
+@media (min-width: 1600px) {
+  .cols--4--bp-x-large {
+    clear: both;
+    margin-left: 0;
+    list-style: none; }
+    .cols--4--bp-x-large:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .cols--4--bp-x-large > * {
+      float: left;
+      box-sizing: border-box;
+      width: calc(25% - 0.75rem);
+      margin-right: 1rem;
+      width: calc(24.75% - 0.75rem) \9; }
+      .cols--4--bp-x-large > *:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    @media all and (min-width: 1600px) and (-ms-high-contrast: none), (min-width: 1600px) and (-ms-high-contrast: active) {
+      .cols--4--bp-x-large > * {
+        width: calc(24.75% - 0.75rem); } }
+
+@media (min-width: 1600px) {
+      .cols--4--bp-x-large > *:not(:nth-child(4n)) {
+        margin-right: 1rem; }
+      .cols--4--bp-x-large > *:nth-child(4n) {
+        margin-right: 0; }
+    .cols--4--bp-x-large > *:nth-child(4n) + * {
+      clear: both; }
+    .cols--4--bp-x-large > *:not(:nth-child(4n)) + * {
+      clear: none; } }
+
+/***
+    title: Container
+    section: Layout
+    description: Centers an element on the screen at a width of $site-width-max and a max width of $site-width.
+    example:
+        <div class="container">
+            <h1>I'm centered</h1>
+            <p>In the middle of the page</p>
+        </div>
+***/
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  @media (min-width: 1060px) {
+    .container {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+/***
+    title: Forms
+    section: Forms
+    description: Form styling.
+    example:
+        <form method="post" action="">
+            <p>
+                <label>
+                    Name<br>
+                    <input type="text" name="name" placeholder="eg. John Doe">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Email<br>
+                    <input type="email" name="email" placeholder="eg. john.doe@example.com">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Message<br>
+                    <textarea name="message" rows="3" cols="60" placeholder="Write your message here"></textarea>
+                </label>
+            </p>
+            <p><input type="submit" value="Go"></p>
+        </form>
+***/
+p.message.success {
+  color: #060; }
+
+p.message.error {
+  color: #600; }
+
+form {
+  margin: 0; }
+  form strong.error {
+    display: block;
+    margin-top: 0.5rem;
+    color: #600; }
+  form abbr,
+  form abbr[title] {
+    color: #600;
+    border-bottom: 0; }
+
+.form__field,
+.captcha-wrap {
+  margin-bottom: 1rem; }
+
+label {
+  display: block; }
+  label span.value {
+    float: right; }
+
+input[type=text], input[type=password], input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], textarea {
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.2\9;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-radius: 0.2rem;
+  width: 100%; }
+  input[type=text]:hover, input[type=text]:focus, input[type=password]:hover, input[type=password]:focus, input[type=search]:hover, input[type=search]:focus, input[type=email]:hover, input[type=email]:focus, input[type=url]:hover, input[type=url]:focus, input[type=tel]:hover, input[type=tel]:focus, input[type=number]:hover, input[type=number]:focus, input[type=date]:hover, input[type=date]:focus, input[type=month]:hover, input[type=month]:focus, input[type=week]:hover, input[type=week]:focus, input[type=time]:hover, input[type=time]:focus, input[type=datetime]:hover, input[type=datetime]:focus, input[type=datetime-local]:hover, input[type=datetime-local]:focus, input[type=color]:hover, input[type=color]:focus, textarea:hover, textarea:focus {
+    border-color: rgba(75, 75, 75, 0.5); }
+
+input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
+  display: none; }
+
+input[type=radio],
+input[type=checkbox] {
+  margin-right: .4rem; }
+  [dir=rtl] input[type=radio], [dir=rtl]
+  input[type=checkbox] {
+    margin-right: 0;
+    margin-left: .4rem; }
+
+textarea {
+  resize: y;
+  max-width: 100%; }
+
+select {
+  box-sizing: border-box;
+  max-width: 100%; }
+
+::-webkit-input-placeholder {
+  color: #999; }
+
+::-moz-placeholder {
+  color: #999; }
+
+:-ms-input-placeholder {
+  color: #999; }
+
+::placeholder {
+  color: #999; }
+
+input[type=submit],
+button {
+  outline: 0; }
+
+form .form__connected-fields:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+form .form__connected-fields > * {
+  float: left;
+  width: auto;
+  min-height: 3.2rem; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  background: gray;
+  height: .25rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  outline: 0;
+  border: 0; }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  input[type=range]::-ms-fill-lower {
+    background: #06c; }
+  input[type=range]::-ms-fill-upper {
+    background: #888; }
+
+/***
+    title: Headings
+    section: Typography
+    description: Use to create headings. H1-H6 automatically get the correct styling, however you can use the heading--X classes to make non-headings look like headings, and headings of one size appear to have a different size.
+    example:
+        <h1 class="heading--4">I'm a H1 but look like a H4</h1>
+        <h3>I'm a normal H3</h3>
+        <p class="heading--1">I'm not a heading at all!</p>
+***/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading--1,
+.heading--2,
+.heading--3,
+.heading--4,
+.heading--5,
+.heading--6 {
+  display: block;
+  margin: 0 0 1rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-family: Helvetica, sans-serif;
+  color: #444;
+  letter-spacing: 0; }
+
+h2,
+.heading--2 {
+  font-size: 2rem; }
+
+h3,
+.heading--3 {
+  font-size: 1.6rem; }
+
+h4,
+.heading--4 {
+  font-size: 1.4rem; }
+
+h5,
+.heading--5 {
+  font-size: 1.2rem; }
+
+h6,
+.heading--6 {
+  font-size: 1.1rem; }
+
+/* @media (max-width: 759px) {
+	h1,
+	.heading--1 {
+		font-size: $font-size-h1 * .8;
+	}
+
+	h2,
+	.heading--2 {
+		font-size: $font-size-h2 * .8;
+	}
+
+	h3,
+	.heading--3 {
+		font-size: $font-size-h3 * .8;
+	}
+} */
+/***
+    title: Icon
+    section: Icons
+    description: Use to add icons to elements. Icons added to empty elements will have zero spacing around them whereas icons added to elements with content will have some spacing. Add icons to the icons.json file (using fontello.com) and Gulp takes care of the rest.
+    example:
+        <p>
+            <a href="#" class="icon-facebook">Facebook</a>
+            <a href="#" class="icon-twitter">Twitter</a>
+            <a href="#" class="icon-facebook icon--round" title="Facebook"></a>
+            <a href="#" class="icon-twitter icon--round" title="Twitter"></a>
+            <button class="icon-search">Find</button>
+            <a href="#" class="icon-right icon--after">Icon after text</a>
+        </p>
+
+        <ul class="cols cols--2">
+            <li class="icon-facebook icon--above">Facebook</li>
+            <li class="icon-twitter icon--above">Twitter</li>
+        </ul>
+***/
+/**
+ * Some icon tweaks and margins
+ */
+[class^="icon-"]:before, [class^="icon-"]:after,
+[class*="icon-"]:before,
+[class*="icon-"]:after {
+  text-decoration: none; }
+
+[class^="icon-"]:before,
+[class*="icon-"]:before {
+  margin: 0 0.4em 0 0; }
+
+[class^="icon-"].icon--after:after,
+[class*="icon-"].icon--after:after {
+  margin: 0 0 0 0.4em; }
+
+[class^="icon-"]:empty:after, [class^="icon-"]:empty:before,
+[class*="icon-"]:empty:after,
+[class*="icon-"]:empty:before {
+  margin: 0; }
+
+/**
+ * Icon Above
+ */
+.icon--above {
+  display: inline-block;
+  text-align: center; }
+  .icon--above:before {
+    display: block;
+    margin: 0 auto;
+    font-size: 2em; }
+
+.icon--after.icon--below {
+  display: inline-block;
+  text-align: center; }
+  .icon--after.icon--below:after {
+    display: block;
+    margin: 0 auto;
+    font-size: 2em; }
+
+/**
+ * Spinner
+ */
+@keyframes spin {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.icon-spinner:before,
+.icon-spinner.icon--after:after {
+  animation: spin 1.5s infinite linear; }
+
+/**
+ * Round icon
+ * TODO: icon--round should be exactly like buttons (with :hover/:active --ghost and different colors)
+ */
+.icon--round {
+  text-decoration: none; }
+  .icon--round:hover {
+    text-decoration: none; }
+  .icon--round:before, .icon--round.icon--after:after {
+    background: #369;
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    text-align: center;
+    color: #fff;
+    text-shadow: none;
+    border-radius: 50%;
+    transition: all .25s ease-out; }
+  .icon--round:hover:before, .icon--round.icon--after:hover:after {
+    background: rgba(51, 102, 153, 0.2);
+    color: #369; }
+  .icon--round--ghost:before, .icon--round--ghost.icon--after:after {
+    background: transparent;
+    color: #369;
+    border: 1px solid #369; }
+  .icon--round--ghost:hover:before, .icon--round--ghost.icon--after:hover:after {
+    background: rgba(51, 102, 153, 0.2); }
+
+/* a.icon--round:hover,
+a:hover .icon--round {
+	&:before,
+	&.icon--after:after {
+		border-radius: .2rem;
+	}
+} */
+/**
+ * Icon colors
+ */
+.icon--blue:before {
+  color: #0000ff; }
+
+.icon--after.icon--blue:after {
+  color: #0000ff; }
+
+.icon--round--blue:before {
+  background-color: #0000ff; }
+
+.icon--round--blue.icon--round--ghost:before {
+  background-color: transparent;
+  color: #0000ff;
+  border-color: #0000ff; }
+
+.icon--round--blue:hover:before {
+  background-color: rgba(0, 0, 255, 0.2);
+  color: #0000ff; }
+
+.icon--round--blue.icon--round--ghost:hover:before {
+  background-color: rgba(0, 0, 255, 0.2); }
+
+/***
+    title: Images
+    section: Images
+    description: Various helper classes for styling images.
+    example:
+        <img src="http://placehold.it/100x100" class="img--round"> <img src="http://placehold.it/100x100" class="img--rounded">
+***/
+.img--round {
+  border-radius: 50%; }
+
+.img--rounded {
+  border-radius: .4rem; }
+
+.img--grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+/***
+    title: Inline Grid
+    section: Grid
+    description: Uses inline-block to create a grid. Useful if you dynamically toggle elemens in the grid and need them to adapt to new positions. Note that there can't be any whitespace between elements in the HTML source code and for some reason doesn't work in the styleguide.
+    example:
+        <ul class="inline-grid inline-grid--2--bp-medium"><li>Two column grid</li><li>Two column grid</li><li>Two column grid</li><li>Two column grid</li></ul>
+***/
+.inline-grid {
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 0;
+  list-style: none; }
+  .inline-grid > * {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    width: 50%; }
+
+.inline-grid--2 > * {
+  width: 50%; }
+
+.inline-grid--3 > * {
+  width: 33.3333333333%; }
+
+.inline-grid--4 > * {
+  width: 25%; }
+
+@media (min-width: 400px) {
+  .inline-grid--2--bp-small > * {
+    width: 50%; } }
+
+@media (min-width: 400px) {
+  .inline-grid--3--bp-small > * {
+    width: 33.3333333333%; } }
+
+@media (min-width: 400px) {
+  .inline-grid--4--bp-small > * {
+    width: 25%; } }
+
+@media (min-width: 760px) {
+  .inline-grid--2--bp-medium > * {
+    width: 50%; } }
+
+@media (min-width: 760px) {
+  .inline-grid--3--bp-medium > * {
+    width: 33.3333333333%; } }
+
+@media (min-width: 760px) {
+  .inline-grid--4--bp-medium > * {
+    width: 25%; } }
+
+@media (min-width: 1020px) {
+  .inline-grid--2--bp-large > * {
+    width: 50%; } }
+
+@media (min-width: 1020px) {
+  .inline-grid--3--bp-large > * {
+    width: 33.3333333333%; } }
+
+@media (min-width: 1020px) {
+  .inline-grid--4--bp-large > * {
+    width: 25%; } }
+
+@media (min-width: 1600px) {
+  .inline-grid--2--bp-x-large > * {
+    width: 50%; } }
+
+@media (min-width: 1600px) {
+  .inline-grid--3--bp-x-large > * {
+    width: 33.3333333333%; } }
+
+@media (min-width: 1600px) {
+  .inline-grid--4--bp-x-large > * {
+    width: 25%; } }
+
+/***
+    title: Link
+    section: Links
+    description: Link styling. You can use the link class to make anything look like a link.
+    example:
+        <a href="#">Normal link</a>
+        <span class="link">Not a link at all</span>
+        <a href="#" class="link--neutral">Link that looks like text</a>
+        <a href="#" class="link--underline">Link with underline</a>
+***/
+a,
+.link {
+  cursor: pointer;
+  color: #06f;
+  text-decoration: none; }
+  a:hover,
+  .link:hover {
+    color: #09f;
+    text-decoration: none; }
+  a[role=button]:focus, a[href^="#"]:focus,
+  .link[role=button]:focus,
+  .link[href^="#"]:focus {
+    outline: 0; }
+
+.link--neutral {
+  color: inherit;
+  text-decoration: none; }
+  .link--neutral:hover {
+    color: inherit;
+    text-decoration: none; }
+
+.link--neutral--hover {
+  color: inherit; }
+  .link--neutral--hover:hover {
+    color: #09f;
+    text-decoration: none; }
+
+.link--no-underline {
+  text-decoration: none; }
+  .link--no-underline:hover {
+    text-decoration: none; }
+
+.link--underline {
+  text-decoration: underline; }
+  .link--underline:hover {
+    text-decoration: none; }
+
+/***
+    title: List
+    section: Lists
+    description: Various classes you can use on lists, or list like markup.
+    example:
+        <h2>Pipe separated</h2>
+        <ul class="list--pipe-separated">
+            <li>Pipes</li>
+            <li>Separate</li>
+            <li>Me</li>
+        </ul>
+        <h2>Inline list</h2>
+        <ul class="list--inline text--center">
+            <li>Inline list</li>
+            <li>Inline list</li>
+            <li>Inline list</li>
+            <li>Inline list</li>
+        </ul>
+***/
+.list--pipe-separated {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  .list--pipe-separated > * {
+    display: inline-block; }
+    .list--pipe-separated > *:not(:last-child):after {
+      content: " | ";
+      margin: 0 0.5rem; }
+
+.list--inline {
+  margin-left: 0;
+  list-style: none; }
+  .list--inline > * {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; }
+  .text--center .list--inline > *, .list--inline.text--center > * {
+    margin: 0 0.25rem; }
+
+.list--border {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  .list--border > :not(:last-child) {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5); }
+
+.list--plain {
+  margin-left: 0;
+  list-style: none; }
+
+/***
+    title: Primary/Secondary
+    section: Grid
+    description: Super basic primary/secondary content columns when you really don't need an entire grid system.
+    example:
+        <div class="box box__content">
+            <div class="primary-content">
+                <p>Primary content here</p>
+            </div>
+            <div class="secondary-content">
+                <p>Secondary content here</p>
+            </div>
+        </div>
+        <div class="box box__content">
+            <div class="secondary-content">
+                <p>Reversed order here</p>
+            </div>
+            <div class="primary-content">
+                <p>Primary content here</p>
+            </div>
+        </div>
+***/
+@media (min-width: 760px) {
+  .primary-content {
+    width: 60%;
+    float: left; }
+  .secondary-content {
+    width: 35%;
+    float: left; }
+  .primary-content + .secondary-content {
+    margin-left: 5%; }
+  .secondary-content + .primary-content {
+    margin-left: 5%; }
+  .primary-content + .secondary-content + * {
+    clear: both; }
+  .secondary-content + .primary-content + * {
+    clear: both; } }
+
+@media (max-width: 759px) {
+  .primary-content,
+  .secondary-content {
+    margin-bottom: 1rem; } }
+
+/**
+ * @section
+ *
+ * Creates a full width section with centered content based on preferred site width
+ *
+ * @param	color	$bg: section background color
+ */
+/**
+ * @unsection
+ *
+ * Utility mixin for removing section styling
+ */
+/**
+ * @section-centering
+ *
+ * Takes care of centering the section content using padding and calc
+ */
+/**
+ * @section-right
+ *
+ * Positions an element at the right edge of the inner content of the section
+ */
+/**
+ * @section-left
+ *
+ * Positions an element at the left edge of the inner content of the section
+ */
+/**
+ * @section-bottom
+ *
+ * Positions an element at the bottom edge of the inner content of the section
+ */
+/**
+ * @section-top
+ *
+ * Positions an element at the top edge of the inner content of the section
+ */
+/**
+ * @section-inner
+ *
+ * Creates a section within a section, so you can have an article as section, and article header as an inner section for example
+ *
+ * @param	string	$align: top/bottom; if you want to pull it up towards the top or down towards the bottom
+ */
+/**
+ * @section-border-centering
+ *
+ * Same as @section-centering but uses border instead of padding
+ */
+/***
+    title: Section
+    section: Layout
+    description: Creates a full width section with centered content (based on site-width).
+    example:
+        <div class="section bg--blue">
+            <h2>I'm a section</h2>
+            <p>With some content</p>
+        </div>
+***/
+.section {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /*	@media (min-width: 760px) {
+		padding-top: $section-padding--bp-medium;
+		padding-bottom: $section-padding--bp-medium;
+	} */
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  .section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 1060px) {
+    .section {
+      padding-left: calc(50% - 480px + 0rem);
+      padding-right: calc(50% - 480px + 0rem); } }
+  .section__inner {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* @media (min-width: 760px) {
+		padding-top: $section-padding--bp-medium;
+		padding-bottom: $section-padding--bp-medium;
+		margin-top: $section-padding--bp-medium;
+		margin-bottom: $section-padding--bp-medium;
+
+		@if ($align == top) {
+			margin-top: -$section-padding--bp-medium;
+		}
+		@if ($align == bottom) {
+			margin-bottom: -$section-padding--bp-medium;
+		}
+	} */ }
+    @media (min-width: 1060px) {
+      .section__inner {
+        box-sizing: border-box;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc(50vw - 480px);
+        padding-right: calc(50vw - 480px); } }
+    .section__inner--top {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-top: -2rem;
+      /* @media (min-width: 760px) {
+		padding-top: $section-padding--bp-medium;
+		padding-bottom: $section-padding--bp-medium;
+		margin-top: $section-padding--bp-medium;
+		margin-bottom: $section-padding--bp-medium;
+
+		@if ($align == top) {
+			margin-top: -$section-padding--bp-medium;
+		}
+		@if ($align == bottom) {
+			margin-bottom: -$section-padding--bp-medium;
+		}
+	} */ }
+      @media (min-width: 1060px) {
+        .section__inner--top {
+          box-sizing: border-box;
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: calc(50vw - 480px);
+          padding-right: calc(50vw - 480px); } }
+    .section__inner--bottom {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-bottom: -2rem;
+      /* @media (min-width: 760px) {
+		padding-top: $section-padding--bp-medium;
+		padding-bottom: $section-padding--bp-medium;
+		margin-top: $section-padding--bp-medium;
+		margin-bottom: $section-padding--bp-medium;
+
+		@if ($align == top) {
+			margin-top: -$section-padding--bp-medium;
+		}
+		@if ($align == bottom) {
+			margin-bottom: -$section-padding--bp-medium;
+		}
+	} */ }
+      @media (min-width: 1060px) {
+        .section__inner--bottom {
+          box-sizing: border-box;
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: calc(50vw - 480px);
+          padding-right: calc(50vw - 480px); } }
+  .section--slanted {
+    -webkit-clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
+    clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+    .section--slanted-top {
+      -webkit-clip-path: polygon(0 3rem, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 3rem, 100% 0, 100% 100%, 0 100%);
+      padding-top: 5rem; }
+    .section--slanted-bottom {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 0 100%);
+      padding-bottom: 5rem; }
+
+.table-grid {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  .table-grid > * {
+    display: block; }
+  @media (min-width: 760px) {
+    .table-grid {
+      display: table;
+      table-layout: fixed;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: 100%;
+      width: calc(100% + 1rem); }
+      .table-grid > * {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
+
+.table-grid--bp-medium {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  .table-grid--bp-medium > * {
+    display: block; }
+  @media (min-width: 760px) {
+    .table-grid--bp-medium {
+      display: table;
+      table-layout: fixed;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: 100%;
+      width: calc(100% + 1rem); }
+      .table-grid--bp-medium > * {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
+
+/***
+    title: Text Colors
+    section: Colors
+    description: Use to give an element's text a different color.
+    example:
+        <div class="bg--blue color--white">
+            <h2>I have white</h2>
+            <p>Text text text text text text text text text text text text text</p>
+        </div>
+***/
+.color--transparent,
+h1.color--transparent,
+h2.color--transparent,
+h3.color--transparent,
+h4.color--transparent,
+h5.color--transparent,
+h6.color--transparent,
+.heading--1.color--transparent,
+.heading--2.color--transparent,
+.heading--3.color--transparent,
+.heading--4.color--transparent,
+.heading--5.color--transparent,
+.heading--6.color--transparent,
+a.color--transparent,
+.link.color--transparent {
+  color: transparent; }
+
+a.color--transparent:hover,
+.link.color--transparent:hover {
+  color: #09f;
+  text-decoration: none; }
+
+.color--transparent h1,
+.color--transparent h2,
+.color--transparent h3,
+.color--transparent h4,
+.color--transparent h5,
+.color--transparent h6,
+.color--transparent .heading--1,
+.color--transparent .heading--2,
+.color--transparent .heading--3,
+.color--transparent .heading--4,
+.color--transparent .heading--5,
+.color--transparent .heading--6,
+.color--transparent a,
+.color--transparent .link,
+.color--transparent a:hover,
+.color--transparent .link:hover {
+  color: transparent;
+  text-decoration: none; }
+
+.color--white,
+h1.color--white,
+h2.color--white,
+h3.color--white,
+h4.color--white,
+h5.color--white,
+h6.color--white,
+.heading--1.color--white,
+.heading--2.color--white,
+.heading--3.color--white,
+.heading--4.color--white,
+.heading--5.color--white,
+.heading--6.color--white,
+a.color--white,
+.link.color--white {
+  color: #fff; }
+
+a.color--white:hover,
+.link.color--white:hover {
+  color: #09f;
+  text-decoration: none; }
+
+.color--white h1,
+.color--white h2,
+.color--white h3,
+.color--white h4,
+.color--white h5,
+.color--white h6,
+.color--white .heading--1,
+.color--white .heading--2,
+.color--white .heading--3,
+.color--white .heading--4,
+.color--white .heading--5,
+.color--white .heading--6,
+.color--white a,
+.color--white .link,
+.color--white a:hover,
+.color--white .link:hover {
+  color: #fff;
+  text-decoration: none; }
+
+/***
+    title: Text
+    section: Typography
+    description: Various helper classes for working with text.
+    example:
+        <p class="text--center">This text is centered and <strong class="text--upper">upper case</strong></p>
+***/
+.text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: Helvetica, sans-serif;
+  color: #333;
+  word-wrap: break-word;
+  font-weight: normal; }
+
+.text--upper {
+  text-transform: uppercase; }
+
+.text--center {
+  text-align: center; }
+
+.text--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.pull-right {
+  float: right; }
+
+img.pull-right {
+  margin-left: 1rem;
+  margin-bottom: 1rem; }
+
+.pull-left {
+  float: left; }
+
+img.pull-left {
+  margin-right: 1rem;
+  margin-bottom: 1rem; }
+
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.alignleft,
+.alignright,
+.alignnone {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem; }
+
+.wp-caption {
+  background: gainsboro;
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem; }
+  .wp-caption img {
+    display: block;
+    width: 100%; }
+  .wp-caption figcaption {
+    padding: .5rem; }
+
+@media (min-width: 760px) {
+  .alignleft {
+    float: left;
+    width: auto;
+    margin: 0 1rem 1rem 0; }
+  .alignright {
+    float: right;
+    width: auto;
+    margin: 0 0 1rem 1rem; } }
+
+/**
+ * Border box
+ */
+* {
+  box-sizing: border-box; }
+
+/**
+ * General styling
+ */
+html {
+  background: #fff;
+  font-size: 100%; }
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: Helvetica, sans-serif;
+  color: #333;
+  word-wrap: break-word;
+  font-weight: normal; }
+
+/**
+ * Paragraphs, lists, quotes etc
+ */
+p {
+  margin: 0 0 1rem; }
+
+ul,
+ol {
+  margin: 0 0 1rem 2rem;
+  padding: 0; }
+
+blockquote,
+q {
+  font-size: 120%;
+  margin: 0; }
+
+blockquote > :first-child:before,
+blockquote > :last-child:after {
+  content: open-quote;
+  line-height: 1; }
+
+blockquote > :last-child:after {
+  content: close-quote; }
+
+pre {
+  background: #fafafa;
+  color: #111;
+  padding: 1rem;
+  max-height: 300px;
+  overflow: auto; }
+
+/**
+ * Inline elements
+ */
+small,
+.text--small {
+  font-size: 80%; }
+
+.text--large {
+  font-size: 120%; }
+
+/**
+ * Images, iframes etc
+ */
+img,
+svg {
+  max-width: 100%;
+  height: auto; }
+
+hr {
+  clear: both;
+  margin: 1rem 0;
+  padding: 0;
+  height: 0;
+  border: 0;
+  border-top: 1px solid rgba(100, 100, 100, 0.5); }
+  @media (min-width: 760px) {
+    hr {
+      margin: 2rem 0; } }
 
 /*# sourceMappingURL=app.css.map */

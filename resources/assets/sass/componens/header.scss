@@ -1,0 +1,67 @@
+#header {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+
+    .logo {
+        @media #{$bp-3} {
+            @include float(left);
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    nav {
+        @media #{$bp-3} {
+            @include float(left);
+
+            margin: 1.3rem 0 0; // Align with logo
+        }
+
+        @media #{$bp-4} {
+            margin-left: $gutter * 2;
+
+            [dir=rtl] & {
+                margin-left: 0;
+                margin-right: $gutter * 2;
+            }
+        }
+
+        > ul {
+            > li {
+                &:after {
+                    content: " | ";
+                    opacity: .3;
+                }
+
+                &:last-child:after {
+                    content: "";
+                }
+
+                > a,
+                > span {
+                    padding: 0 ($margin / 2);
+
+                    @media #{$bp-5} {
+                        padding: 0 $margin;
+                    }
+                }
+
+                > ul {
+                    background: $color-link;
+                    padding: 1.8rem 0 0;
+                    border-radius: 0 0 .2rem .2rem;
+
+                    li {
+                        a {
+                            display: block;
+                            padding: ($margin / 2) $margin;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
