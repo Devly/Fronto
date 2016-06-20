@@ -1,0 +1,118 @@
+// Media query breakpoints
+$bp-0: '(min-width: 321px)';
+$bp-1: '(min-width: 375px)';
+$bp-2: '(min-width: 425px)';
+$bp-3: '(min-width: 600px)';
+$bp-4: '(min-width: 768px)';
+$bp-5: '(min-width: 1024px)';
+$bp-6: '(min-width: 1200px)';
+
+$bp-0-max: '(max-width: 320px)';
+$bp-1-max: '(max-width: 374px)';
+$bp-2-max: '(max-width: 424px)';
+$bp-3-max: '(max-width: 599px)';
+$bp-4-max: '(max-width: 767px)';
+$bp-5-max: '(max-width: 1023px)';
+$bp-6-max: '(max-width: 1199px)';
+
+// Site width and max width
+$site-width: 92%;
+$max-site-width: 980px;
+$site-margin: (100% - $site-width) / 2;
+
+// Margins, paddings and gutter
+$margin: 1rem;
+$gutter: 1.5rem;
+$section-padding: 1rem;
+$icon-margin: .5rem;
+
+// Body font
+$body-font: "IRANSans", Tahoma, sans-serif;
+$body-font-weight: normal;
+$body-font-size: 1rem;
+$body-line-height: 1.4;
+$body-letter-spacing: 0;
+$small-font-size: $body-font-size * .8;
+
+// Heading font
+$heading-font: "IRANSans", Tahoma, sans-serif;
+$heading-font-weight: bold;
+$heading-line-height: 1.3;
+$heading-letter-spacing: 0;
+$heading-text-transform: none;
+$heading-margin: $margin;
+
+$h1-size: 1.4rem;
+$h2-size: 1.2rem;
+$h3-size: 1rem;
+$h4-size: 1rem;
+$h5-size: 1rem;
+$h6-size: 1rem;
+
+// Links
+$link-decoration: false;
+$link-font-weight: inherit;
+
+// General colors
+$color-white: #fff;
+$color-gray: #999;
+$color-light-gray: #f5f5f5;
+$color-orange: #fb9517;
+$color-price: #627a2c;
+$color-blue: #0078C1;
+$color-light-blue: #03ACED;
+$color-gold: #FFA900;
+$color-green: #8DC641;
+$color-red: #FF4444;
+
+// Font colors
+$color-body: #111;
+$color-heading: #111;
+$color-small: $color-gray;
+
+// Links and buttons
+$color-link: $color-blue;
+$color-link-hover: $color-orange;
+$color-link-visited: #795B92;
+$color-button: $color-link;
+
+// Backgrounds and borders
+$color-shadow: rgba(0, 0, 0, .5);
+$color-border: #E5E5E5;
+$color-body-bg: $color-white;
+$color-body-bg-alt: #FAFAFA;
+$color-body-bg-inv: #111;
+
+// Hover
+$hover-color-transition-amount: 7%;
+
+// Transitions
+$transition-speed: .2s;
+
+// Button config
+$button-fade: 0;
+$button-border: false;
+$button-border-radius: .2rem;
+$button-shadow: false;
+$button-padding-vertical: .6rem;
+$button-padding-horizontal: 1rem;
+$button-font-size: $body-font-size;
+$button-text-transform: none;
+$button-font-weight: bold;
+$button-text-shadow: false;
+
+// Forms
+$form-field-height: 2.7rem;
+$form-field-border: true;
+$form-field-border-color: #CCC;
+$form-field-border-color-hover: darken($form-field-border-color, 10%);
+$form-field-border-color-focused: $color-light-blue;
+$form-field-border-radius: .2rem;
+$form-padding-vertical: .6rem;
+$form-padding-horizontal: 1rem;
+$color-form-error: $color-red;
+$color-form-success: $color-green;
+$color-form-warning: $color-orange;
+
+// General border-radius
+$border-radius: .2rem;
