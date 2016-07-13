@@ -1,0 +1,7 @@
+#serp {
+    h3 {
+        @include heading($font-size-h6);
+
+        color: $color-darkgray;
+    }
+}

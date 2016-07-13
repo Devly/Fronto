@@ -1,0 +1,14 @@
+@mixin ratio($x, $y) {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: #{$y / $x * 100 + '%'};
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

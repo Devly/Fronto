@@ -1,1 +1,12 @@
 @import "font";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main.section {
+    padding-top: $margin;
+    padding-bottom: $margin;
+}

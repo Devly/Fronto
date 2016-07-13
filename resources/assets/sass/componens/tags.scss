@@ -1,0 +1,25 @@
+.tags {
+    @include section();
+
+    border-bottom: 1px solid $color-border;
+
+    h3,
+    ul {
+        @include float-right();
+        @include text();
+
+        margin: 0;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    ul {
+        @include separated-list('،');
+
+        li a:before {
+            content: '#';
+        }
+    }
+}
