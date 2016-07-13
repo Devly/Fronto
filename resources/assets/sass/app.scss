@@ -1,4 +1,15 @@
+@import "config";
 @import "SleekCSS/sleek-css.scss";
 @import "SleekCSS/general";
-@import "config";
+@import "SleekCSS-RTL/sleek-css-rtl";
+@import "general";
 
+// Modules
+@import "modules/serp";
+@import "modules/footer";
+
+// Components
+@import "componens/misc";
+@import "componens/header";
+@import "componens/tags";
+@import "componens/item";

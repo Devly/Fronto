@@ -1,0 +1,35 @@
+.item {
+    @include clearfix();
+
+    border-bottom: 1px solid $color-border;
+    padding-top: $margin;
+
+    > div {
+        @include table-grid();
+
+        margin-bottom: $margin;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    figure {
+        width: 240px;
+
+        div {
+            @include ratio(4, 3);
+        }
+    }
+
+    p {
+    }
+
+    ul {
+        @include separated-list('|');
+    }
+
+    a {
+        @include float-left();
+    }
+}

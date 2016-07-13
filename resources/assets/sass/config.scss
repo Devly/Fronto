@@ -16,9 +16,14 @@ $bp-5-max: '(max-width: 1023px)';
 $bp-6-max: '(max-width: 1199px)';
 
 // Site width and max width
-$site-width: 92%;
+$site-width: 980px;
 $max-site-width: 980px;
-$site-margin: (100% - $site-width) / 2;
+
+// Layout width
+$primary-secondary-gutter: 3%;
+$primary-content-width: 70%;
+$primary-secondary-gutter: 0%;
+$primary-content-width: 100%;
 
 // Margins, paddings and gutter
 $margin: 1rem;
@@ -27,7 +32,7 @@ $section-padding: 1rem;
 $icon-margin: .5rem;
 
 // Body font
-$body-font: "IRANSans", Tahoma, sans-serif;
+$font-family-default: IRANSans, Tahoma, SansSerif, sans-serif;
 $body-font-weight: normal;
 $body-font-size: 1rem;
 $body-line-height: 1.4;
@@ -35,7 +40,7 @@ $body-letter-spacing: 0;
 $small-font-size: $body-font-size * .8;
 
 // Heading font
-$heading-font: "IRANSans", Tahoma, sans-serif;
+$font-family-heading: IRANSans, Tahoma, SansSerif, sans-serif;
 $heading-font-weight: bold;
 $heading-line-height: 1.3;
 $heading-letter-spacing: 0;

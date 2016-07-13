@@ -1,50 +1,49 @@
 #header {
+    @include clearfix;
+
     padding-top: .4rem;
     padding-bottom: .4rem;
+    text-align: center;
+    border-bottom: 1px solid $color-border;
 
     .logo {
-        @media #{$bp-3} {
-            @include float(left);
+        @include float-right();
+        margin-bottom: 0;
+
+        h2 {
+            &:after,
+            &:before {
+                content: " - ";
+            }
         }
 
-        img {
-            display: block;
+        h3 {
+            @include heading($font-size-h6);
         }
     }
 
     nav {
-        @media #{$bp-3} {
-            @include float(left);
-
-            margin: 1.3rem 0 0; // Align with logo
-        }
-
-        @media #{$bp-4} {
-            margin-left: $gutter * 2;
-
-            [dir=rtl] & {
-                margin-left: 0;
-                margin-right: $gutter * 2;
-            }
-        }
+        @include float-left();
+        
+        margin-top: 2 * $margin;
+        margin-bottom: 0;
 
         > ul {
-            > li {
-                &:after {
-                    content: " | ";
-                    opacity: .3;
-                }
+            margin: 0;
 
-                &:last-child:after {
-                    content: "";
-                }
+            > li {
+                display: inline-block;
 
                 > a,
                 > span {
-                    padding: 0 ($margin / 2);
+                    color: darken($color-darkgray, 20%);
+                    margin: 0 ($margin / 4);
+                    padding: 0 ($margin / 4);
+                    //border-bottom: 1px solid $color-border;
 
                     @media #{$bp-5} {
-                        padding: 0 $margin;
+                        margin: 0 $margin / 2;
+                        padding: 0 $margin / 2;
                     }
                 }
 

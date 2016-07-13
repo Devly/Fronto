@@ -1,0 +1,19 @@
+@media #{$bp-medium} {
+    .primary-content {
+        float: right;
+    }
+
+    .secondary-content {
+        float: left;
+    }
+
+    .primary-content + .secondary-content {
+        margin-left: 0;
+        margin-right: $primary-secondary-gutter;
+    }
+
+    .secondary-content + .primary-content {
+        margin-left: 0;
+        margin-right: $primary-secondary-gutter;
+    }
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="rtl" class="no-js" id="{{ page_id }}-page">
+<html lang="fa-IR" dir="rtl" class="no-js" id="{{ page_id }}-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,64 +15,239 @@
     <!--<meta name="robots" content="seo.robots"/>-->
     <!-- endif -->
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon/manifest.json">
-    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
-
     <!-- Define theme color -->
-    <meta name="msapplication-TileColor" content="#0078C1">
-    <meta name="theme-color" content="#0078C1">
+    <meta name="msapplication-TileColor" content="#ef4b23">
+    <meta name="theme-color" content="#ef4b23">
 
-    <link href="/css/app.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="{{ elixir('css/app.css') }}">-->
+    <link href="css/app.css" rel="stylesheet">
 
     <script async>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
-    <script async>window.ga = window.ga || function () {(ga.q = ga.q || []).push(arguments)};ga.l = +new Date;ga('create', 'UA-29284406-14', 'auto');ga('send', 'pageview');</script>
+    <script async>window.ga = window.ga || function () {
+                (ga.q = ga.q || []).push(arguments)
+            };
+    ga.l = +new Date;
+    ga('create', 'UA-29284406-14', 'auto');
+    ga('send', 'pageview');</script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body>
 
-<!-- HEADER block -->
-<header id="header" class="section">
-    <a href="/" class="logo"><img src="/img/logo.png" alt="_('site_title')"></a>
+<main class="section">
+    <!-- HEADER block -->
+    <header id="header">
+        <a href="/" class="logo">
+            <!-- if home page? use H1 -->
+            <h2>فرانتو</h2>
 
-    <nav>
+            <h3>اولین منظومه طراحان و برنامه نویسان</h3>
+        </a>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        صفحه اصلی
+                    </a>
+                </li>
+                <li>
+                    <a href="/" class="icon-plus">
+                        + افزودن وبسایت
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- /HEADER block -->
+
+    <!-- CONTENT -->
+    <section class="tags">
+        <h3>برچسب ها:</h3>
         <ul>
-            <li>
-                <a href="/">
-                    _('home')
-                </a>
-            </li>
-            <li>
-                <a href="/" class="icon-plus">
-                    _('add_site')
-                </a>
-            </li>
+            <li><a href="#">برچسب</a></li>
+            <li><a href="#">برچسب</a></li>
+            <li><a href="#">برچسب</a></li>
+            <li><a href="#">برچسب</a></li>
+            <li><a href="#">برچسب</a></li>
+            <li><a href="#">برچسب</a></li>
         </ul>
-    </nav>
-</header>
-<!-- /HEADER block -->
+    </section>
 
-<main>
+    <div class="clearfix">
+        <section class="primary-content section" id="serp">
+            <h3>جدید ترین مطالب</h3>
 
+            <article class="item">
+                <h4>عنوان تست عنوان تست عنوان تست عنوان</h4>
+
+                <div>
+                    <figure>
+                        <div>
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=Sample%20Image%20:D&w=240&h=180"
+                                 alt="عنوان">
+                        </div>
+                    </figure>
+
+                    <p>
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                    </p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>ارسال شده در: ۲ روز پیش</li>
+                        <li>توسط پدارم مرندی</li>
+                    </ul>
+
+                    <a class="more" href="#">بیشتر</a>
+                </div>
+            </article>
+            <article class="item">
+                <h4>عنوان تست عنوان تست عنوان تست عنوان</h4>
+
+                <div>
+                    <figure>
+                        <div>
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=Sample%20Image%20:D&w=240&h=180"
+                                 alt="عنوان">
+                        </div>
+                    </figure>
+
+                    <p>
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                    </p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>ارسال شده در: ۲ روز پیش</li>
+                        <li>توسط پدارم مرندی</li>
+                    </ul>
+
+                    <a class="more" href="#">بیشتر</a>
+                </div>
+            </article>
+            <article class="item">
+                <h4>عنوان تست عنوان تست عنوان تست عنوان</h4>
+
+                <div>
+                    <figure>
+                        <div>
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=Sample%20Image%20:D&w=240&h=180"
+                                 alt="عنوان">
+                        </div>
+                    </figure>
+
+                    <p>
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                    </p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>ارسال شده در: ۲ روز پیش</li>
+                        <li>توسط پدارم مرندی</li>
+                    </ul>
+
+                    <a class="more" href="#">بیشتر</a>
+                </div>
+            </article>
+            <article class="item">
+                <h4>عنوان تست عنوان تست عنوان تست عنوان</h4>
+
+                <div>
+                    <figure>
+                        <div>
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=Sample%20Image%20:D&w=240&h=180"
+                                 alt="عنوان">
+                        </div>
+                    </figure>
+
+                    <p>
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                    </p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>ارسال شده در: ۲ روز پیش</li>
+                        <li>توسط پدارم مرندی</li>
+                    </ul>
+
+                    <a class="more" href="#">بیشتر</a>
+                </div>
+            </article>
+            <article class="item">
+                <h4>عنوان تست عنوان تست عنوان تست عنوان</h4>
+
+                <div>
+                    <figure>
+                        <div>
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=Sample%20Image%20:D&w=240&h=180"
+                                 alt="عنوان">
+                        </div>
+                    </figure>
+
+                    <p>
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                        در اندوه نشسته آمت، بسیار آسان است. معمار و عواقب حرص و آز، که شایسته ترین آن هستند و به
+                        آزادی تولید کنندگان از این پایدار فرار کرد و ارائه هر گونه رد لذت از زندگی.
+                    </p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>ارسال شده در: ۲ روز پیش</li>
+                        <li>توسط پدارم مرندی</li>
+                    </ul>
+
+                    <a class="more" href="#">بیشتر</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="secondary-content"></section>
+    </div>
+
+    <section id="pagination">
+        <!--<a href="index.html" class="pull-left">بعدی</a>-->
+    </section>
+
+    <!-- /CONTENT -->
+
+    <!-- FOOTER BLOCK-->
+    <footer class="text--center">
+        <a class="pull-left" target="_blank" href="https://github.com/devly/fronto"
+           title="Fronto is an open source project :) contribute here">
+            <svg class="github" height="16" fill="#000000" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+        Fronto, made with
+        <svg class="heart" height="16" fill="#E86C60" viewBox="0 0 24 24">
+            <path d="M17,0c-1.9,0-3.7,0.8-5,2.1C10.7,0.8,8.9,0,7,0C3.1,0,0,3.1,0,7c0,6.4,10.9,15.4,11.4,15.8 c0.2,0.2,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2C13.1,22.4,24,13.4,24,7C24,3.1,20.9,0,17,0z"></path>
+        </svg>
+        in
+        <a href="http://github.com/devly" target="_blank">Devly</a>
+        <br>
+        <small>Copyright © 2016</small>
+    </footer>
+    <!-- /FOOTER BLOCK-->
 </main>
-
-<!-- FOOTER BLOCK-->
-
-<!-- /FOOTER BLOCK-->
 
 </body>
 </html>
